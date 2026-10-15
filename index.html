@@ -10,6 +10,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet"> <!--Fuente de google fonts-->
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -17,51 +21,122 @@
 <body>
     <!-- HEADER  -->
     <header>
-        <nav class="h_contenido">
+        <div class="container">
+
+            <nav class="navbar navbar-expand-sm bg-light fixed-top border-body" data-bs-theme="light">
+                <a href="./index.html" class="navbar-brand mb-0 h1">
+                    <img class="d-inline-block align-top" src="./cosas/store.png" alt="icon" width="60" height="60">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a href="./index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a href="./sitios/tienda.html" class="nav-link active">Tienda</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a href="./sitios/blog.html" class="nav-link">Blog</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a href="./sitios/about.html" class="nav-link">Acerca de nosotros</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a href="./sitios/contacto.html" class="nav-link">Contacto</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a href="./sitios/carrito.html" class="nav-link">Carrito</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- lo dejo porque las clases de bootstrap todavia me dan miedo
             <div>
                 <a class="icon" href="./index.html"><img src="./cosas/store.png" alt="Icono"></a>
             </div>
             <ol class="h_lista">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./sitios/tienda.html">Tienda</a></li>
-                <li><a href="./sitios/blog.html">Blog</a></li>
-                <li><a href="./sitios/about.html">Acerca de nosotros</a></li>
-                <li><a href="./sitios/contacto.html">Contacto</a></li>
-                <li><a href="./sitios/carrito.html">Carrito</a></li>
-            </ol>
-            <div class="mobile">
-                <a class="icon" href="./sitios/carrito.html"><img src="./cosas/shopping-cart.png" alt="Carrito"></a>
-            </div>
-        </nav>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./sitios/tienda.html">Tienda</a></li>
+            <li><a href="./sitios/blog.html">Blog</a></li>
+            <li><a href="./sitios/about.html">Acerca de nosotros</a></li>
+            <li><a href="./sitios/contacto.html">Contacto</a></li>
+            <li><a href="./sitios/carrito.html">Carrito</a></li>
+        </ol>
+        <div class="mobile">
+            <a class="icon" href="./sitios/carrito.html"><img src="./cosas/shopping-cart.png" alt="Carrito"></a>
+        </div>
+    </nav>
+   <nav class="h_contenido"> -->
     </header>
 
     <!--PAGINA PRINCIPAL-->
     <main>
-        <section class="hero"> <!-- Banner-->
-            <h4 class="hero_titulo">Ofertitas</h4>
-            <p class="hero_p">Solo por este mes <strong class="hero_p_oferta">70% de descuento</strong> en moda y
-                calzado</p>
-            <button class="hero_b">Ver más</button>
+        <!--
+            <section class="hero"> 
+                <h4 class="hero_titulo">Ofertitas</h4>
+                <p class="hero_p">Solo por este mes <strong class="hero_p_oferta">70% de descuento</strong> en moda y
+                    calzado</p>
+                    <button class="hero_b">Ver más</button>
+                </section>
+            -->
+        <section class="bg-light hero text-center py-5 mb-5">
+            <div class="container py-4">
+                <h1 class="display-4 fw-bold">Ofertitas</h1>
+                <p class="lead text-light mb-4">
+                    Solo por este mes <strong class="text-danger">70% de descuento</strong> en moda y calzado
+                </p>
+                <button class="btn btn-primary btn-lg px-4 hero_btn">Ver más</button>
+            </div>
         </section>
 
         <!--CATEGORIAS-->
-        <section class="categorias">
-            <div class="cat_item">
-                <div class="cat_item_i">
-                    <h2>categoría</h2>
-                    <button>ir a categoría</button>
+        <!--
+            <section class="categorias">
+                <div class="cat_item">
+                    <div class="cat_item_i">
+                        <h2>categoría</h2>
+                        <button>ir a categoría</button>
+                    </div>
+                    <div class="cat_item_i">
+                        <h2>categoría</h2>
+                        <button>ir a categoría</button>
+                    </div>
+                    <div class="cat_item_i">
+                        <h2>categoría</h2>
+                        <button>ir a categoría</button>
+                    </div>
+                    <div class="cat_item_i">
+                        <h2>categoría</h2>
+                        <button>ir a categoría</button>
+                    </div>
                 </div>
-                <div class="cat_item_i">
-                    <h2>categoría</h2>
-                    <button>ir a categoría</button>
+            </section>
+        -->
+        <section class="container">
+            <div class="row-g4">
+                <div class="card h-100 w-50 text-center shadow-sm">
+                    <div class="card-title h5 mb-3"> categoria</div>
+                    <button class="btn btn-outline-primary mt-auto">Ir a categoria</button>
                 </div>
-                <div class="cat_item_i">
-                    <h2>categoría</h2>
-                    <button>ir a categoría</button>
+            </div>
+            <div class="row-g4">
+                <div class="card h-100 w-50 text-center shadow-sm">
+                    <div class="card-title h5 mb-3"> categoria</div>
+                    <button class="btn btn-outline-primary mt-auto">Ir a categoria</button>
                 </div>
-                <div class="cat_item_i">
-                    <h2>categoría</h2>
-                    <button>ir a categoría</button>
+            </div><div class="row-g4">
+                <div class="card h-100 w-50 text-center shadow-sm">
+                    <div class="card-title h5 mb-3"> categoria</div>
+                    <button class="btn btn-outline-primary mt-auto">Ir a categoria</button>
+                </div>
+            </div><div class="row-g4">
+                <div class="card h-100 w-50 text-center shadow-sm">
+                    <div class="card-title h5 mb-3"> categoria</div>
+                    <button class="btn btn-outline-primary mt-auto">Ir a categoria</button>
                 </div>
             </div>
         </section>
@@ -88,6 +163,7 @@
             </ul>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
